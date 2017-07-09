@@ -5,11 +5,7 @@ class Node
 {
   public:
     Node(const T &value) : next(NULL), data(value) {}
-    ~Node()
-    {
-        delete this->next;
-        this->setValue(0);
-    }
+    ~Node() {}
 
     void operator=(const Node<T> &node)
     {

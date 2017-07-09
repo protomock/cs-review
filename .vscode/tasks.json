@@ -3,6 +3,6 @@
     "command": "g++",
     "isShellCommand": true,
     "showOutput": "always",
-    "args": ["-g", "C++/stack.cpp"],
+    "args": ["-g", "C++/tests/singly-linked-list-tests.cpp"],
     "preLaunchTask": "g++"
 }

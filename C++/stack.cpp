@@ -22,14 +22,3 @@ class Stack
   private:
     SinglyLinkedList<T> *_stack;
 };
-
-int main()
-{
-    Stack<int> *stack = new Stack<int>();
-    stack->push(1);
-    stack->push(11);
-
-    int popped = stack->pop();
-    int poppedAgain = stack->pop();
-    int poppedAgainAgain = stack->pop();
-};
