@@ -1,5 +1,6 @@
 #include "./node.cpp"
 #include <exception>
+#include <cstdio>
 
 template <class T>
 class SinglyLinkedList
@@ -26,6 +27,7 @@ class SinglyLinkedList
             next = head->getNext();
             delete head;
             head = next;
+            
         }
 
         tail = NULL;
@@ -129,7 +131,27 @@ class SinglyLinkedList
         return result;
     }
 
+    Node<T>* reverse() {
+       return this->_reverse(this->head);
+    }
+
   private:
     Node<T> *head;
     Node<T> *tail;
+
+    Node<T>* _reverse(Node<T> *head) {
+        if(!head) return NULL;
+
+        _reverse(head->getNext());
+
+        if(head->getNext()) 
+        {
+            Node<T> *tmp = head->getNext()->getNext();
+            head->getNext()->setNext(head);
+            head = head->getNext();
+            head->getNext()->setNext(tmp);
+        }
+
+        return head;
+    }
 };

@@ -154,3 +154,43 @@ TEST_CASE( "InsertAfter", "[insertAfter]" ) {
         }
     }
 }
+
+TEST_CASE( "reverse", "[reverse]" ) {
+    // SECTION("when linked list has no elements") {
+    //     sll->DeleteAll();
+    //     REQUIRE(sll->reverse() == NULL);
+    // }
+    // SECTION("when linked list has 1 element") {
+    //     Node<int> *nodeToInsertAfter = new Node<int>(45);
+    //     sll->InsertInFront(nodeToInsertAfter);
+    //     Node<int> *reversed = sll->reverse();
+    //     REQUIRE(reversed->value() == 45);
+    //     REQUIRE(reversed->getNext() == NULL);
+    // }
+    // SECTION("when linked list is has 2 element") {
+    //     sll->DeleteAll();
+    //     Node<int> *nodeToInsertAfter = new Node<int>(45);
+    //     Node<int> *nodeToInsertAfter2 = new Node<int>(123);
+    //     sll->InsertInFront(nodeToInsertAfter);
+    //     sll->InsertInFront(nodeToInsertAfter2);
+
+    //     Node<int> *reversed = sll->reverse();
+    //     REQUIRE(reversed->value() == 45);
+    //     REQUIRE(reversed->getNext()->value() == 123);
+    // }
+
+    SECTION("when linked list is has 3 element") {
+        sll->DeleteAll();
+        Node<int> *nodeToInsertAfter = new Node<int>(45);
+        Node<int> *nodeToInsertAfter2 = new Node<int>(123);
+        Node<int> *nodeToInsertAfter3 = new Node<int>(678);
+        sll->InsertInFront(nodeToInsertAfter);
+        sll->InsertInFront(nodeToInsertAfter2);
+        sll->InsertInFront(nodeToInsertAfter3);
+
+        Node<int> *reversed = sll->reverse();
+        REQUIRE(reversed->value() == 45);
+        REQUIRE(reversed->getNext()->value() == 123);
+        REQUIRE(reversed->getNext()->getNext()->value() == 678);
+    }
+}

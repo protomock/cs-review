@@ -1,0 +1,8 @@
+/Users/chutchens/Documents/workspace/cs-review/C#/bin/Debug/netcoreapp1.1/C#.deps.json
+/Users/chutchens/Documents/workspace/cs-review/C#/bin/Debug/netcoreapp1.1/C#.runtimeconfig.json
+/Users/chutchens/Documents/workspace/cs-review/C#/bin/Debug/netcoreapp1.1/C#.runtimeconfig.dev.json
+/Users/chutchens/Documents/workspace/cs-review/C#/bin/Debug/netcoreapp1.1/C#.dll
+/Users/chutchens/Documents/workspace/cs-review/C#/bin/Debug/netcoreapp1.1/C#.pdb
+/Users/chutchens/Documents/workspace/cs-review/C#/obj/Debug/netcoreapp1.1/C#.AssemblyInfo.cs
+/Users/chutchens/Documents/workspace/cs-review/C#/obj/Debug/netcoreapp1.1/C#.dll
+/Users/chutchens/Documents/workspace/cs-review/C#/obj/Debug/netcoreapp1.1/C#.pdb
