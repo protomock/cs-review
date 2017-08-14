@@ -1,18 +1,10 @@
 using System;
 using System.Collections.Generic;
 
-namespace C_
+namespace src
 {
-    public class LinkedListSamples
+    public class LinkedListExamples
     {
-
-        public LinkedListSamples()
-        {
-            var linkedList = Create();
-            var element = FindNthFromLast(linkedList.First, 4);
-            Console.WriteLine(element.Value);
-        }
-
         public static LinkedListNode<int> FindNthFromLast(LinkedListNode<int> head, int n)
         {
             if (head == null) return null;

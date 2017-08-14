@@ -1,20 +1,23 @@
-namespace ConsoleApplication 
+namespace src
 {
-    public class Account 
+    public class Account
     {
-        int userNumber { get; set;}
-        string userFirstName { get; set;}
-        string userLastName { get; set;}
-        double userBalance {get; set;}
+        int userNumber { get; set; }
+        string userFirstName { get; set; }
+        string userLastName { get; set; }
+        double userBalance { get; set; }
 
-        bool deposit(double amount) 
+        bool deposit(double amount)
         {
             double newBalance;
-            if(amount < 0.0) 
+            if (amount < 0.0)
             {
                 return false;
-            } else {
-                lock(this) {
+            }
+            else
+            {
+                lock (this)
+                {
                     newBalance = userBalance + amount;
                     userBalance = newBalance;
                 }
@@ -22,14 +25,17 @@ namespace ConsoleApplication
             }
         }
 
-        bool withdraw(double amount) 
+        bool withdraw(double amount)
         {
             double newBalance;
-            if(amount < 0.0) 
+            if (amount < 0.0)
             {
                 return false;
-            } else {
-                lock(this) {
+            }
+            else
+            {
+                lock (this)
+                {
                     newBalance = userBalance - amount;
                     userBalance = newBalance;
                 }
