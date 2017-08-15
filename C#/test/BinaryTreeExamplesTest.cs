@@ -47,5 +47,31 @@ namespace test
             root.Right = new TreeNode<int>(100);
             Assert.False(BinaryTreeExamples.IsBalanced(root));
         }
+
+        [Fact]
+        public void CreateTree_ShouldCreateATreeWithMinimalHeight_Odd()
+        {
+            var tree = BinaryTreeExamples.CreateTree(new int[]{
+                1,2,3,4,5
+            });
+            Assert.Equal(tree.Value, 1);
+            Assert.Equal(tree.Left.Value, 2);
+            Assert.Equal(tree.Right.Value, 3);
+            Assert.Equal(tree.Left.Left.Value, 4);
+            Assert.Equal(tree.Left.Right.Value, 5);
+        }
+
+        [Fact]
+          public void CreateTree_ShouldCreateATreeWithMinimalHeight_Even()
+        {
+            var tree = BinaryTreeExamples.CreateTree(new int[]{
+                1,2,3,4
+            });
+            Assert.Equal(tree.Value, 1);
+            Assert.Equal(tree.Left.Value, 2);
+            Assert.Equal(tree.Right.Value, 3);
+            Assert.Equal(tree.Left.Left.Value, 4);
+            Assert.Null(tree.Left.Right);
+        }
     }
 }
